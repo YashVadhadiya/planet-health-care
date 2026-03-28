@@ -1,0 +1,1537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Planet Health Care | Rajkot's Trusted Physiotherapy Clinic</title>
+<meta name="description" content="Planet Health Care – 12+ years of expert physiotherapy in Rajkot. Advanced treatments for pain relief, sports injury, neuro rehab & more. Royal Park, Kalavad Road.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --teal: #1A7F74;
+    --teal-dark: #0F5C54;
+    --teal-light: #E8F5F3;
+    --teal-mid: #2AA898;
+    --coral: #E8533A;
+    --coral-light: #FFF0ED;
+    --white: #F8FAF9;
+    --off-white: #EFF4F3;
+    --charcoal: #1E2B2F;
+    --grey: #6B7C80;
+    --grey-light: #D1DCDA;
+    --gold: #F5A623;
+    --text: #2C3E3B;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--white);
+    color: var(--text);
+    overflow-x: hidden;
+  }
+
+  /* ── HEADER ── */
+  header {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 0 5%;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 72px;
+    background: rgba(248,250,249,0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(26,127,116,0.1);
+    transition: box-shadow 0.3s;
+  }
+  header.scrolled { box-shadow: 0 4px 30px rgba(26,127,116,0.12); }
+
+  .logo {
+    display: flex; align-items: center; gap: 10px; text-decoration: none;
+  }
+  .logo-icon {
+    width: 40px; height: 40px; background: var(--teal); border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .logo-icon svg { width: 22px; height: 22px; fill: white; }
+  .logo-text { display: flex; flex-direction: column; }
+  .logo-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem; font-weight: 700; color: var(--charcoal); line-height: 1.1;
+  }
+  .logo-sub { font-size: 0.65rem; color: var(--teal); font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; }
+
+  nav { display: flex; align-items: center; gap: 2rem; }
+  nav a {
+    text-decoration: none; color: var(--grey); font-size: 0.88rem; font-weight: 500;
+    transition: color 0.2s; position: relative;
+  }
+  nav a::after {
+    content: ''; position: absolute; bottom: -3px; left: 0; width: 0; height: 2px;
+    background: var(--teal); transition: width 0.3s;
+  }
+  nav a:hover { color: var(--teal); }
+  nav a:hover::after { width: 100%; }
+
+  .btn-book {
+    background: var(--coral); color: white; border: none; cursor: pointer;
+    padding: 10px 22px; border-radius: 50px; font-size: 0.88rem; font-weight: 600;
+    text-decoration: none; transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+    display: inline-flex; align-items: center; gap: 6px;
+  }
+  .btn-book:hover { background: #d44429; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(232,83,58,0.35); }
+
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 5px; }
+  .hamburger span { width: 24px; height: 2px; background: var(--charcoal); transition: all 0.3s; display: block; }
+
+  /* ── HERO ── */
+  #hero {
+    min-height: 100vh; padding-top: 72px;
+    display: flex; align-items: center;
+    position: relative; overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background: linear-gradient(135deg, #0d4f48 0%, #1A7F74 45%, #2AA898 100%);
+  }
+  .hero-pattern {
+    position: absolute; inset: 0; opacity: 0.06;
+    background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0);
+    background-size: 36px 36px;
+  }
+  .hero-blob {
+    position: absolute; right: -5%; top: 10%; width: 55%; height: 90%;
+    background: rgba(255,255,255,0.05); border-radius: 60% 40% 40% 60% / 60% 60% 40% 40%;
+    animation: blobFloat 8s ease-in-out infinite;
+  }
+  @keyframes blobFloat {
+    0%,100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(3deg); }
+  }
+  .hero-content {
+    position: relative; z-index: 2; padding: 0 5%;
+    max-width: 1200px; margin: 0 auto; width: 100%;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
+  }
+  .hero-left { color: white; }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.25);
+    padding: 6px 16px; border-radius: 50px; font-size: 0.8rem; font-weight: 500;
+    margin-bottom: 1.5rem; backdrop-filter: blur(8px);
+    animation: fadeSlideUp 0.8s ease both;
+  }
+  .hero-badge .dot { width: 7px; height: 7px; background: #4ECDC4; border-radius: 50%; animation: pulse 2s infinite; }
+  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+
+  .hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.4rem, 5vw, 3.8rem); font-weight: 700; line-height: 1.15;
+    margin-bottom: 1.2rem;
+    animation: fadeSlideUp 0.8s ease 0.1s both;
+  }
+  .hero-title em { font-style: italic; color: #7FDED6; }
+  .hero-sub {
+    font-size: 1.05rem; opacity: 0.85; line-height: 1.7; margin-bottom: 2rem;
+    animation: fadeSlideUp 0.8s ease 0.2s both; max-width: 480px;
+  }
+  .hero-actions {
+    display: flex; gap: 1rem; flex-wrap: wrap;
+    animation: fadeSlideUp 0.8s ease 0.3s both;
+  }
+  .btn-primary {
+    background: var(--coral); color: white; text-decoration: none;
+    padding: 14px 28px; border-radius: 50px; font-weight: 600; font-size: 0.95rem;
+    display: inline-flex; align-items: center; gap: 8px;
+    transition: all 0.2s; box-shadow: 0 8px 24px rgba(232,83,58,0.4);
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(232,83,58,0.5); }
+  .btn-ghost {
+    background: rgba(255,255,255,0.12); color: white; text-decoration: none;
+    padding: 14px 28px; border-radius: 50px; font-weight: 500; font-size: 0.95rem;
+    display: inline-flex; align-items: center; gap: 8px; border: 1px solid rgba(255,255,255,0.3);
+    transition: all 0.2s; backdrop-filter: blur(8px);
+  }
+  .btn-ghost:hover { background: rgba(255,255,255,0.22); }
+
+  .hero-trust {
+    display: flex; gap: 1.5rem; margin-top: 2.5rem; flex-wrap: wrap;
+    animation: fadeSlideUp 0.8s ease 0.4s both;
+  }
+  .trust-item { display: flex; align-items: center; gap: 8px; opacity: 0.9; }
+  .trust-item .t-icon { font-size: 1.2rem; }
+  .trust-item .t-val { font-weight: 700; font-size: 1rem; }
+  .trust-item .t-lab { font-size: 0.75rem; opacity: 0.75; }
+
+  .hero-right {
+    display: flex; flex-direction: column; gap: 1rem;
+    animation: fadeSlideUp 0.8s ease 0.5s both;
+  }
+  .hero-card {
+    background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2);
+    backdrop-filter: blur(16px); border-radius: 16px; padding: 1.2rem 1.5rem;
+    color: white; display: flex; align-items: center; gap: 1rem;
+    transition: background 0.3s;
+  }
+  .hero-card:hover { background: rgba(255,255,255,0.18); }
+  .hc-icon { font-size: 2rem; width: 52px; height: 52px; background: rgba(255,255,255,0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .hc-title { font-weight: 600; font-size: 0.95rem; margin-bottom: 2px; }
+  .hc-sub { font-size: 0.78rem; opacity: 0.7; }
+
+  @keyframes fadeSlideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── STATS ── */
+  #stats {
+    background: var(--charcoal); padding: 3rem 5%;
+  }
+  .stats-grid {
+    max-width: 1000px; margin: 0 auto;
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem;
+  }
+  .stat-item { text-align: center; padding: 1rem; }
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; color: #7FDED6; display: block;
+  }
+  .stat-label { font-size: 0.82rem; color: rgba(255,255,255,0.6); margin-top: 4px; display: block; }
+
+  /* ── SECTIONS SHARED ── */
+  section { padding: 5rem 5%; }
+  .section-tag {
+    display: inline-block; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--teal); margin-bottom: 0.8rem;
+    font-family: 'DM Mono', monospace;
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 700; color: var(--charcoal);
+    line-height: 1.2; margin-bottom: 1rem;
+  }
+  .section-sub { color: var(--grey); font-size: 1rem; line-height: 1.7; max-width: 560px; }
+  .section-header { margin-bottom: 3rem; }
+  .section-header.centered { text-align: center; }
+  .section-header.centered .section-sub { margin: 0 auto; }
+  .max-w { max-width: 1200px; margin: 0 auto; }
+
+  /* Reveal animations */
+  .reveal {
+    opacity: 0; transform: translateY(40px); transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+  .reveal-delay-3 { transition-delay: 0.3s; }
+  .reveal-delay-4 { transition-delay: 0.4s; }
+
+  /* ── SERVICES ── */
+  #services { background: var(--white); }
+  .services-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;
+  }
+  .service-card {
+    background: white; border-radius: 20px; padding: 2rem;
+    border: 1px solid var(--grey-light);
+    transition: all 0.3s; cursor: default;
+    position: relative; overflow: hidden;
+  }
+  .service-card::before {
+    content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 4px;
+    background: linear-gradient(90deg, var(--teal), var(--teal-mid));
+    transform: scaleX(0); transition: transform 0.3s; transform-origin: left;
+  }
+  .service-card:hover { box-shadow: 0 12px 40px rgba(26,127,116,0.15); transform: translateY(-4px); border-color: var(--teal-light); }
+  .service-card:hover::before { transform: scaleX(1); }
+  .sc-icon {
+    width: 56px; height: 56px; background: var(--teal-light); border-radius: 14px;
+    display: flex; align-items: center; justify-content: center; font-size: 1.6rem;
+    margin-bottom: 1.2rem;
+  }
+  .sc-title { font-weight: 700; font-size: 1.05rem; margin-bottom: 0.5rem; color: var(--charcoal); }
+  .sc-desc { font-size: 0.87rem; color: var(--grey); line-height: 1.6; }
+  .sc-link { display: inline-flex; align-items: center; gap: 4px; color: var(--teal); font-size: 0.82rem; font-weight: 600; margin-top: 1rem; text-decoration: none; }
+  .sc-link:hover { gap: 8px; }
+
+  /* ── CONDITIONS ── */
+  #conditions { background: var(--off-white); }
+  .conditions-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+  .conditions-left {}
+  .conditions-right {}
+  .conditions-cloud {
+    display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 2rem;
+  }
+  .cond-tag {
+    background: white; border: 1px solid var(--grey-light); padding: 8px 16px;
+    border-radius: 50px; font-size: 0.82rem; font-weight: 500; color: var(--charcoal);
+    cursor: default; transition: all 0.2s;
+  }
+  .cond-tag:hover { background: var(--teal); color: white; border-color: var(--teal); transform: scale(1.05); }
+  .cond-image-box {
+    background: linear-gradient(135deg, var(--teal-light) 0%, white 100%);
+    border-radius: 24px; padding: 2rem; height: 340px;
+    display: flex; align-items: center; justify-content: center;
+    border: 1px solid rgba(26,127,116,0.15); position: relative; overflow: hidden;
+  }
+  .cond-svg-art { width: 220px; height: 220px; opacity: 0.8; }
+
+  /* ── EQUIPMENT ── */
+  #equipment { background: var(--white); }
+  .equip-scroll { overflow-x: hidden; padding-bottom: 1rem; }
+  .equip-track { display: flex; gap: 1.2rem; width: max-content; padding: 0.5rem 0; animation: scroll-left 20s linear infinite; }
+  @keyframes scroll-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .equip-card {
+    background: white; border: 1px solid var(--grey-light); border-radius: 16px;
+    padding: 1.5rem; width: 200px; flex-shrink: 0; text-align: center;
+    transition: all 0.3s;
+  }
+  .equip-card:hover { border-color: var(--teal); box-shadow: 0 8px 24px rgba(26,127,116,0.12); transform: translateY(-3px); }
+  .eq-icon { font-size: 2rem; margin-bottom: 0.8rem; display: block; }
+  .eq-name { font-weight: 600; font-size: 0.88rem; color: var(--charcoal); margin-bottom: 4px; }
+  .eq-abbr { font-size: 0.75rem; color: var(--teal); font-family: 'DM Mono', monospace; }
+  .eq-desc { font-size: 0.78rem; color: var(--grey); margin-top: 6px; line-height: 1.5; }
+
+  /* ── ABOUT ── */
+  #about { background: var(--off-white); }
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+  .about-image-area { position: relative; }
+  .about-main-card {
+    background: linear-gradient(135deg, var(--teal-dark) 0%, var(--teal) 100%);
+    border-radius: 24px; height: 400px; display: flex; align-items: center; justify-content: center;
+    position: relative; overflow: hidden;
+  }
+  .about-overlay-card {
+    position: absolute; bottom: -20px; right: -20px;
+    background: white; border-radius: 16px; padding: 1.2rem 1.5rem;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.15); min-width: 200px;
+  }
+  .aoc-rating { display: flex; gap: 3px; margin-bottom: 4px; }
+  .aoc-rating span { color: var(--gold); font-size: 1rem; }
+  .aoc-score { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 700; color: var(--charcoal); }
+  .aoc-label { font-size: 0.78rem; color: var(--grey); }
+  .aoc-count { font-size: 0.75rem; color: var(--teal); font-weight: 500; }
+
+  .about-text {}
+  .about-values { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2rem; }
+  .av-item {
+    background: white; border-radius: 14px; padding: 1.2rem;
+    border: 1px solid var(--grey-light);
+  }
+  .av-icon { font-size: 1.4rem; margin-bottom: 6px; display: block; }
+  .av-title { font-weight: 600; font-size: 0.9rem; color: var(--charcoal); margin-bottom: 4px; }
+  .av-desc { font-size: 0.8rem; color: var(--grey); line-height: 1.5; }
+
+  /* ── TESTIMONIALS ── */
+  #testimonials { background: var(--charcoal); }
+  #testimonials .section-title { color: white; }
+  #testimonials .section-tag { color: #7FDED6; }
+  .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; }
+  .testi-card {
+    background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px; padding: 1.8rem; transition: background 0.3s;
+  }
+  .testi-card:hover { background: rgba(255,255,255,0.1); }
+  .testi-stars { display: flex; gap: 3px; margin-bottom: 1rem; }
+  .testi-stars span { color: var(--gold); font-size: 0.9rem; }
+  .testi-quote { color: rgba(255,255,255,0.85); font-size: 0.92rem; line-height: 1.75; font-style: italic; margin-bottom: 1.2rem; }
+  .testi-author { display: flex; align-items: center; gap: 10px; }
+  .testi-avatar {
+    width: 40px; height: 40px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--teal) 0%, var(--teal-mid) 100%);
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700; color: white; font-size: 0.95rem; flex-shrink: 0;
+  }
+  .testi-name { font-weight: 600; color: white; font-size: 0.88rem; }
+  .testi-cond { font-size: 0.75rem; color: rgba(255,255,255,0.5); }
+  .testi-source { font-size: 0.7rem; color: var(--teal-mid); font-family: 'DM Mono', monospace; margin-top: 2px; }
+
+  /* ── HOME VISIT BANNER ── */
+  #home-visit {
+    background: linear-gradient(135deg, var(--teal) 0%, var(--teal-dark) 100%);
+    padding: 4rem 5%; text-align: center;
+  }
+  .hv-inner { max-width: 700px; margin: 0 auto; }
+  .hv-icon { font-size: 3rem; margin-bottom: 1rem; display: block; }
+  .hv-title {
+    font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight: 700; color: white; margin-bottom: 0.8rem;
+  }
+  .hv-sub { color: rgba(255,255,255,0.8); font-size: 1rem; margin-bottom: 2rem; line-height: 1.7; }
+  .btn-white {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: white; color: var(--teal); text-decoration: none;
+    padding: 14px 32px; border-radius: 50px; font-weight: 700; font-size: 0.95rem;
+    transition: all 0.2s; box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  }
+  .btn-white:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(0,0,0,0.3); }
+
+  /* ── CONTACT ── */
+  #contact { background: var(--off-white); }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
+  .contact-info {}
+  .ci-item { display: flex; gap: 1rem; margin-bottom: 1.5rem; align-items: flex-start; }
+  .ci-icon {
+    width: 44px; height: 44px; background: var(--teal-light); border-radius: 12px;
+    display: flex; align-items: center; justify-content: center; font-size: 1.1rem;
+    flex-shrink: 0;
+  }
+  .ci-label { font-size: 0.75rem; color: var(--grey); font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 3px; }
+  .ci-val { font-weight: 600; color: var(--charcoal); font-size: 0.95rem; line-height: 1.5; }
+  .ci-val a { color: var(--teal); text-decoration: none; }
+
+  .timing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-top: 0.5rem; }
+  .timing-row { display: flex; justify-content: space-between; font-size: 0.82rem; padding: 5px 0; border-bottom: 1px dashed var(--grey-light); }
+  .timing-row .day { color: var(--grey); }
+  .timing-row .time { font-weight: 600; color: var(--teal); }
+  .timing-row.closed .time { color: var(--coral); }
+
+  .contact-form-box {
+    background: white; border-radius: 24px; padding: 2rem;
+    border: 1px solid var(--grey-light); box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  }
+  .form-title { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; color: var(--charcoal); margin-bottom: 1.5rem; }
+  .form-group { margin-bottom: 1rem; }
+  .form-group label { display: block; font-size: 0.8rem; font-weight: 600; color: var(--charcoal); margin-bottom: 5px; }
+  .form-group input, .form-group select, .form-group textarea {
+    width: 100%; padding: 12px 16px; border: 1.5px solid var(--grey-light);
+    border-radius: 10px; font-family: 'DM Sans', sans-serif; font-size: 0.9rem;
+    color: var(--charcoal); outline: none; transition: border-color 0.2s;
+    background: var(--off-white);
+  }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--teal); background: white; }
+  .form-group textarea { height: 90px; resize: vertical; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .btn-submit {
+    width: 100%; background: var(--teal); color: white; border: none; cursor: pointer;
+    padding: 14px; border-radius: 12px; font-size: 0.95rem; font-weight: 600;
+    font-family: 'DM Sans', sans-serif; transition: all 0.2s; margin-top: 0.5rem;
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+  }
+  .btn-submit:hover { background: var(--teal-dark); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(26,127,116,0.3); }
+
+  /* Wrapper that stacks the two map cards vertically */
+  .map-boxes { margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem; }
+  .map-box {
+    border-radius: 14px; border: 1px solid var(--grey-light);
+    background: linear-gradient(135deg, var(--teal-light), white);
+    display: flex; align-items: center; gap: 1rem;
+    padding: 1rem 1.2rem; color: var(--teal); text-decoration: none;
+    transition: all 0.3s;
+  }
+  .map-box:hover { border-color: var(--teal); box-shadow: 0 4px 20px rgba(26,127,116,0.15); transform: translateX(3px); }
+  .map-box .map-pin { font-size: 1.8rem; flex-shrink: 0; }
+  .map-box .map-text { display: flex; flex-direction: column; gap: 2px; }
+  .map-box .map-branch { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--teal); font-family: 'DM Mono', monospace; }
+  .map-box .map-label { font-weight: 600; font-size: 0.88rem; color: var(--charcoal); line-height: 1.3; }
+  .map-box .map-sub { font-size: 0.75rem; color: var(--grey); }
+  .map-box .map-arrow { margin-left: auto; font-size: 1rem; color: var(--teal); opacity: 0.5; flex-shrink: 0; transition: opacity 0.2s, transform 0.2s; }
+  .map-box:hover .map-arrow { opacity: 1; transform: translateX(3px); }
+
+  /* ── FORM VALIDATION STYLES ── */
+  /* Red border + background tint when a required field is invalid */
+  .form-group input.invalid,
+  .form-group select.invalid,
+  .form-group textarea.invalid {
+    border-color: #e53e3e !important;
+    background: #fff5f5 !important;
+    animation: shakeField 0.35s ease;
+  }
+  /* Small red error message that appears below the field */
+  .field-error {
+    display: none; color: #e53e3e; font-size: 0.75rem;
+    font-weight: 500; margin-top: 4px;
+  }
+  .field-error.show { display: block; }
+  /* Shake animation so the user's eye is drawn to the problem */
+  @keyframes shakeField {
+    0%,100% { transform: translateX(0); }
+    20%      { transform: translateX(-6px); }
+    40%      { transform: translateX(6px); }
+    60%      { transform: translateX(-4px); }
+    80%      { transform: translateX(4px); }
+  }
+
+  /* ── REDESIGNED SOCIAL LINKS ── */
+  .social-links { display: flex; gap: 0.75rem; margin-top: 1.5rem; flex-wrap: wrap; }
+  .soc-link {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 9px 16px; border-radius: 10px; text-decoration: none;
+    font-size: 0.82rem; font-weight: 600; letter-spacing: 0.02em;
+    transition: transform 0.2s, box-shadow 0.2s, filter 0.2s;
+    border: none; color: white;
+  }
+  .soc-link svg { width: 18px; height: 18px; flex-shrink: 0; }
+  .soc-link:hover { transform: translateY(-2px); filter: brightness(1.1); box-shadow: 0 6px 18px rgba(0,0,0,0.18); }
+  .soc-link.wa { background: #25D366; }
+  .soc-link.fb { background: #1877F2; }
+  .soc-link.ig { background: linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+
+  /* ── BRANCH SELECTOR ── */
+  .branch-selector { margin-bottom: 1.4rem; }
+  .branch-selector-label {
+    font-size: 0.8rem; font-weight: 600; color: var(--charcoal);
+    margin-bottom: 0.6rem; display: block;
+  }
+  .branch-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+  .branch-card {
+    border: 2px solid var(--grey-light); border-radius: 12px;
+    padding: 12px 14px; cursor: pointer; transition: all 0.2s;
+    background: var(--off-white);
+  }
+  .branch-card:hover { border-color: var(--teal); background: var(--teal-light); }
+  .branch-card.selected { border-color: var(--teal); background: var(--teal-light); }
+  .branch-card input[type="radio"] { display: none; }
+  .branch-card-name { font-weight: 700; font-size: 0.88rem; color: var(--charcoal); margin-bottom: 3px; }
+  .branch-card-addr { font-size: 0.75rem; color: var(--grey); line-height: 1.45; }
+  .branch-card-pin {
+    display: inline-flex; align-items: center; gap: 4px;
+    font-size: 0.7rem; color: var(--teal); font-weight: 600;
+    margin-top: 5px;
+  }
+
+  /* ── FOOTER ── */
+  footer { background: #0d1f1d; padding: 3rem 5% 2rem; }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; max-width: 1200px; margin: 0 auto; }
+  .footer-logo-area .logo-name { color: white; }
+  .footer-logo-area .logo-sub { color: var(--teal-mid); }
+  .footer-tagline { color: rgba(255,255,255,0.5); font-size: 0.85rem; margin-top: 0.8rem; line-height: 1.6; }
+  .footer-col-title { color: white; font-weight: 600; font-size: 0.9rem; margin-bottom: 1rem; }
+  .footer-col a { display: block; color: rgba(255,255,255,0.5); text-decoration: none; font-size: 0.82rem; margin-bottom: 0.5rem; transition: color 0.2s; }
+  .footer-col a:hover { color: var(--teal-mid); }
+  .footer-contact-item { display: flex; gap: 8px; align-items: flex-start; margin-bottom: 0.6rem; }
+  .footer-contact-item .icon { font-size: 0.85rem; color: var(--teal-mid); margin-top: 2px; }
+  .footer-contact-item .val { color: rgba(255,255,255,0.6); font-size: 0.8rem; line-height: 1.5; }
+  .footer-bottom {
+    max-width: 1200px; margin: 2rem auto 0; padding-top: 1.5rem;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: gap;
+  }
+  .footer-copy { color: rgba(255,255,255,0.35); font-size: 0.78rem; }
+
+  /* ── FLOATING BTNS ── */
+  .float-whatsapp {
+    position: fixed; bottom: 24px; right: 24px; z-index: 99;
+    width: 56px; height: 56px; background: #25D366; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 6px 24px rgba(37,211,102,0.5);
+    text-decoration: none; color: white; font-size: 1.5rem;
+    animation: waFloat 3s ease-in-out infinite;
+    transition: transform 0.2s;
+  }
+  .float-whatsapp:hover { transform: scale(1.1); }
+  @keyframes waFloat {
+    0%,100% { transform: translateY(0); box-shadow: 0 6px 24px rgba(37,211,102,0.5); }
+    50% { transform: translateY(-6px); box-shadow: 0 12px 32px rgba(37,211,102,0.6); }
+  }
+  .float-call {
+    position: fixed; bottom: 92px; right: 24px; z-index: 99;
+    background: var(--coral); border-radius: 50%; width: 50px; height: 50px;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 4px 16px rgba(232,83,58,0.4); text-decoration: none; color: white; font-size: 1.2rem;
+    transition: transform 0.2s;
+  }
+  .float-call:hover { transform: scale(1.1); }
+
+  /* ── MOBILE NAV MENU ── */
+  .mobile-menu {
+    display: none; position: fixed; top: 72px; left: 0; right: 0; bottom: 0;
+    background: white; z-index: 99; padding: 2rem 5%; flex-direction: column; gap: 1rem;
+  }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a { font-size: 1.2rem; font-weight: 600; color: var(--charcoal); text-decoration: none; padding: 0.8rem 0; border-bottom: 1px solid var(--grey-light); }
+  .mobile-menu a:hover { color: var(--teal); }
+  .mobile-menu .btn-book { margin-top: 1rem; text-align: center; justify-content: center; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 1024px) {
+    .services-grid { grid-template-columns: repeat(2, 1fr); }
+    .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
+    .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  }
+
+  @media (max-width: 768px) {
+    nav { display: none; }
+    .hamburger { display: flex; }
+    .hero-content { grid-template-columns: 1fr; gap: 2rem; }
+    .hero-right { display: none; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .services-grid { grid-template-columns: 1fr; }
+    .conditions-intro { grid-template-columns: 1fr; }
+    .cond-image-box { display: none; }
+    .about-grid { grid-template-columns: 1fr; }
+    .about-overlay-card { right: 0; bottom: -16px; }
+    .testimonials-grid { grid-template-columns: 1fr; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+    .form-row { grid-template-columns: 1fr; }
+    section { padding: 3.5rem 5%; }
+    .footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
+  }
+
+  /* smooth scroll */
+  html { scroll-padding-top: 80px; }
+
+  /* Equip scroll hide scrollbar */
+  .equip-scroll::-webkit-scrollbar { height: 4px; }
+  .equip-scroll::-webkit-scrollbar-track { background: var(--off-white); border-radius: 2px; }
+  .equip-scroll::-webkit-scrollbar-thumb { background: var(--teal-mid); border-radius: 2px; }
+
+  /* SVG illustration for about */
+  .about-illustration { width: 180px; height: 180px; opacity: 0.9; }
+  .human-body { fill: rgba(255,255,255,0.2); }
+  .accent-circle { fill: rgba(127,222,214,0.3); }
+</style>
+</head>
+<body>
+
+<!-- ──────── HEADER ──────── -->
+<header id="main-header">
+  <a href="#hero" class="logo">
+    <div class="logo-icon">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/>
+        <path d="M10 9h4M12 7v4" stroke="white" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+      </svg>
+    </div>
+    <div class="logo-text">
+      <span class="logo-name">Planet Health Care</span>
+      <span class="logo-sub">Rajkot · Est. 12+ Years</span>
+    </div>
+  </a>
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#conditions">Conditions</a>
+    <a href="#about">About</a>
+    <a href="#testimonials">Reviews</a>
+    <a href="#contact">Contact</a>
+    <a href="#contact">Book Now</a>
+  </nav>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#services" onclick="toggleMenu()">Services</a>
+  <a href="#conditions" onclick="toggleMenu()">Conditions Treated</a>
+  <a href="#equipment" onclick="toggleMenu()">Our Equipment</a>
+  <a href="#about" onclick="toggleMenu()">About Us</a>
+  <a href="#testimonials" onclick="toggleMenu()">Patient Reviews</a>
+  <a href="#contact" onclick="toggleMenu()">Contact</a>
+  <a href="tel:+919307188492" class="btn-book">📅 Book Appointment</a>
+</div>
+
+<!-- ──────── HERO ──────── -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-pattern"></div>
+  <div class="hero-blob"></div>
+
+  <div class="hero-content">
+    <div class="hero-left">
+      <div class="hero-badge">
+        <span class="dot"></span>
+        Rajkot's Most Trusted Physio Clinic
+      </div>
+      <h1 class="hero-title">
+        Your Recovery.<br>
+        <em>Our Purpose.</em>
+      </h1>
+      <p class="hero-sub">
+        Expert physiotherapy care for pain relief, injury rehab & full recovery. Serving Rajkot with compassion and advanced treatment for over 12 years.
+      </p>
+      <div class="hero-actions">
+        <a href="tel:+919307188492" class="btn-primary">📅 Book Appointment</a>
+        <a href="https://wa.me/919307188492?text=Hello%2C%20I%20would%20like%20to%20book%20an%20appointment%20at%20Planet%20Health%20Care." class="btn-ghost" target="_blank"><svg style="width:18px;height:18px;flex-shrink:0;" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg> WhatsApp Us</a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-item">
+          <span class="t-icon">⭐</span>
+          <div>
+            <div class="t-val">4.8★</div>
+            <div class="t-lab">Patient Rating</div>
+          </div>
+        </div>
+        <div class="trust-item">
+          <span class="t-icon">🏥</span>
+          <div>
+            <div class="t-val">12+ Yrs</div>
+            <div class="t-lab">Experience</div>
+          </div>
+        </div>
+        <div class="trust-item">
+          <span class="t-icon">📍</span>
+          <div>
+            <div class="t-val">Royal Park</div>
+            <div class="t-lab">Kalavad Road, Rajkot</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="hero-card">
+        <div class="hc-icon">🏃</div>
+        <div>
+          <div class="hc-title">Sports Physiotherapy</div>
+          <div class="hc-sub">Injury recovery & performance restoration</div>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="hc-icon">🦴</div>
+        <div>
+          <div class="hc-title">Orthopedic Rehab</div>
+          <div class="hc-sub">Back pain, knee, shoulder & joint care</div>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="hc-icon">🧠</div>
+        <div>
+          <div class="hc-title">Neuro Physiotherapy</div>
+          <div class="hc-sub">Paralysis, stroke & nerve injury recovery</div>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="hc-icon">🏠</div>
+        <div>
+          <div class="hc-title">Home Visit Service</div>
+          <div class="hc-sub">Professional treatment at your doorstep</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ──────── STATS ──────── -->
+<div id="stats">
+  <div class="stats-grid">
+    <div class="stat-item reveal">
+      <span class="stat-num" data-target="12">0</span>
+      <span class="stat-label">+ Years of Practice</span>
+    </div>
+    <div class="stat-item reveal reveal-delay-1">
+      <span class="stat-num" data-target="48">0</span>
+      <span class="stat-label">★ Verified Rating</span>
+    </div>
+    <div class="stat-item reveal reveal-delay-2">
+      <span class="stat-num" data-target="1000">0</span>
+      <span class="stat-label">+ Happy Patients</span>
+    </div>
+    <div class="stat-item reveal reveal-delay-3">
+      <span class="stat-num" data-target="25">0</span>
+      <span class="stat-label">+ Conditions Treated</span>
+    </div>
+  </div>
+</div>
+
+<!-- ──────── SERVICES ──────── -->
+<section id="services">
+  <div class="max-w">
+    <div class="section-header reveal">
+      <span class="section-tag">// What We Treat</span>
+      <h2 class="section-title">Complete Physiotherapy<br>Under One Roof</h2>
+      <p class="section-sub">From sports injuries to pediatric care — we bring advanced physiotherapy expertise to every patient, every treatment.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="sc-icon">🏃</div>
+        <div class="sc-title">Sports Physiotherapy</div>
+        <div class="sc-desc">Specialized recovery programs for athletes and active individuals dealing with sprains, ligament injuries, and overuse conditions.</div>
+        <a href="#contact" class="sc-link">Learn more →</a>
+      </div>
+      <div class="service-card reveal reveal-delay-1">
+        <div class="sc-icon">🦴</div>
+        <div class="sc-title">Orthopedic Rehabilitation</div>
+        <div class="sc-desc">Expert care for back pain, PIVD (Slip Disc), cervical pain, knee pain, frozen shoulder, arthritis, and post-surgical recovery.</div>
+        <a href="#contact" class="sc-link">Learn more →</a>
+      </div>
+      <div class="service-card reveal reveal-delay-2">
+        <div class="sc-icon">🧠</div>
+        <div class="sc-title">Neuro Physiotherapy</div>
+        <div class="sc-desc">Specialized rehabilitation for patients with paralysis, stroke, nerve injuries, and other neurological conditions.</div>
+        <a href="#contact" class="sc-link">Learn more →</a>
+      </div>
+      <div class="service-card reveal reveal-delay-1">
+        <div class="sc-icon">👶</div>
+        <div class="sc-title">Pediatric Physiotherapy</div>
+        <div class="sc-desc">Gentle, expert treatment for children with developmental delays, cerebral palsy, and physical disabilities.</div>
+        <a href="#contact" class="sc-link">Learn more →</a>
+      </div>
+      <div class="service-card reveal reveal-delay-2">
+        <div class="sc-icon">🤰</div>
+        <div class="sc-title">Pregnancy Exercise Therapy</div>
+        <div class="sc-desc">Safe, expert-guided exercises and physiotherapy care for expectant mothers throughout pregnancy and post-delivery.</div>
+        <a href="#contact" class="sc-link">Learn more →</a>
+      </div>
+      <div class="service-card reveal reveal-delay-3">
+        <div class="sc-icon">🏠</div>
+        <div class="sc-title">Home Visit Service</div>
+        <div class="sc-desc">Can't travel? Our physiotherapist comes to you. Professional treatment delivered at your home across Rajkot.</div>
+        <a href="#home-visit" class="sc-link">Request home visit →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ──────── CONDITIONS ──────── -->
+<section id="conditions">
+  <div class="max-w">
+    <div class="conditions-intro">
+      <div class="conditions-left">
+        <div class="section-header reveal">
+          <span class="section-tag">// Conditions We Treat</span>
+          <h2 class="section-title">Find Relief<br>From Your Pain</h2>
+          <p class="section-sub">Our expert physiotherapists treat a wide range of conditions. If you're suffering from any of the following, we can help.</p>
+        </div>
+        <div class="conditions-cloud reveal">
+          <span class="cond-tag">Neck Pain</span>
+          <span class="cond-tag">Back Pain</span>
+          <span class="cond-tag">Knee Pain</span>
+          <span class="cond-tag">Shoulder Pain</span>
+          <span class="cond-tag">Sciatica</span>
+          <span class="cond-tag">Slip Disc (PIVD)</span>
+          <span class="cond-tag">Paralysis</span>
+          <span class="cond-tag">Frozen Shoulder</span>
+          <span class="cond-tag">Sports Injury</span>
+          <span class="cond-tag">Nerve Injury</span>
+          <span class="cond-tag">Arthritis</span>
+          <span class="cond-tag">Post-Surgery Rehab</span>
+          <span class="cond-tag">Muscle Pain</span>
+          <span class="cond-tag">Joint Pain</span>
+          <span class="cond-tag">Cervical Spondylosis</span>
+          <span class="cond-tag">Stroke Rehab</span>
+          <span class="cond-tag">Cerebral Palsy</span>
+          <span class="cond-tag">Lumbar Pain</span>
+          <span class="cond-tag">Tendinitis</span>
+          <span class="cond-tag">Plantar Fasciitis</span>
+        </div>
+      </div>
+      <div class="conditions-right reveal reveal-delay-2">
+        <div class="cond-image-box">
+          <svg class="cond-svg-art" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="110" cy="110" r="100" fill="#E8F5F3" stroke="#1A7F74" stroke-width="1.5" stroke-dasharray="6 4"/>
+            <circle cx="110" cy="55" r="22" fill="#1A7F74" opacity="0.7"/>
+            <rect x="98" y="79" width="24" height="55" rx="12" fill="#1A7F74" opacity="0.5"/>
+            <rect x="74" y="86" width="22" height="40" rx="11" fill="#2AA898" opacity="0.4" transform="rotate(-15 85 106)"/>
+            <rect x="122" y="86" width="22" height="40" rx="11" fill="#2AA898" opacity="0.4" transform="rotate(15 133 106)"/>
+            <rect x="94" y="136" width="14" height="48" rx="7" fill="#1A7F74" opacity="0.4" transform="rotate(-5 101 160)"/>
+            <rect x="110" y="136" width="14" height="48" rx="7" fill="#1A7F74" opacity="0.4" transform="rotate(5 117 160)"/>
+            <circle cx="155" cy="95" r="18" fill="none" stroke="#E8533A" stroke-width="2" opacity="0.6"/>
+            <text x="145" y="100" font-family="DM Sans" font-size="14" fill="#E8533A" opacity="0.8">⚡</text>
+            <circle cx="65" cy="105" r="14" fill="none" stroke="#F5A623" stroke-width="2" opacity="0.6"/>
+            <text x="57" y="110" font-family="DM Sans" font-size="12" fill="#F5A623" opacity="0.8">+</text>
+          </svg>
+        </div>
+        <div style="margin-top: 1.5rem; background: white; border-radius: 16px; padding: 1.2rem 1.5rem; border: 1px solid var(--grey-light);">
+          <div style="font-size: 0.78rem; color: var(--grey); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600; margin-bottom: 0.5rem;">Not sure what you have?</div>
+          <div style="font-weight: 600; color: var(--charcoal); margin-bottom: 0.8rem; font-size: 0.95rem;">Call us for a free consultation over phone</div>
+          <a href="tel:+919307188492" style="display: inline-flex; align-items: center; gap: 6px; background: var(--teal); color: white; text-decoration: none; padding: 10px 20px; border-radius: 50px; font-size: 0.85rem; font-weight: 600;">📞 +91 93071 88492</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ──────── EQUIPMENT ──────── -->
+<section id="equipment">
+  <div class="max-w">
+    <div class="section-header centered reveal">
+      <span class="section-tag">// Advanced Technology</span>
+      <h2 class="section-title">State-of-the-Art<br>Therapy Equipment</h2>
+      <p class="section-sub">We invest in advanced clinical equipment to ensure you get the most effective, evidence-based treatment available.</p>
+    </div>
+    <div class="equip-scroll reveal">
+      <div class="equip-track">
+        <div class="equip-card">
+          <span class="eq-icon">⚡</span>
+          <div class="eq-name">Interferential Therapy</div>
+          <div class="eq-abbr">IFT</div>
+          <div class="eq-desc">Deep tissue pain relief using electrical stimulation</div>
+        </div>
+        <div class="equip-card">
+          <span class="eq-icon">📡</span>
+          <div class="eq-name">Short Wave Diathermy</div>
+          <div class="eq-abbr">SWD</div>
+          <div class="eq-desc">Deep heat therapy for muscles and joints</div>
+        </div>
+        <div class="equip-card">
+          <span class="eq-icon">🔊</span>
+          <div class="eq-name">Ultrasound Therapy</div>
+          <div class="eq-abbr">US</div>
+          <div class="eq-desc">Sound waves for deep healing and inflammation</div>
+        </div>
+        <div class="equip-card">
+          <span class="eq-icon">🌡️</span>
+          <div class="eq-name">Paraffin Wax Bath</div>
+          <div class="eq-abbr">PWB</div>
+          <div class="eq-desc">Soothing heat therapy for joint stiffness</div>
+        </div>
+        <div class="equip-card">
+          <span class="eq-icon">🔋</span>
+          <div class="eq-name">TENS Therapy</div>
+          <div class="eq-abbr">TENS</div>
+          <div class="eq-desc">Non-invasive nerve stimulation for pain control</div>
+        </div>
+        <div class="equip-card">
+          <span class="eq-icon">↕️</span>
+          <div class="eq-name">Traction Unit</div>
+          <div class="eq-abbr">Lumbar & Cervical</div>
+          <div class="eq-desc">Spinal decompression for disc and nerve pain</div>
+        </div>
+        <div class="equip-card">
+          <span class="eq-icon">💡</span>
+          <div class="eq-name">Infra Red Radiation</div>
+          <div class="eq-abbr">IRR</div>
+          <div class="eq-desc">Light therapy for tissue healing and pain relief</div>
+        </div>
+        <div class="equip-card">
+          <span class="eq-icon">🦾</span>
+          <div class="eq-name">Muscle Stimulator</div>
+          <div class="eq-abbr">EMS</div>
+          <div class="eq-desc">Electrical muscle re-education and strengthening</div>
+        </div>
+        <div class="equip-card">
+          <span class="eq-icon">🔄</span>
+          <div class="eq-name">Continuous Passive Motion</div>
+          <div class="eq-abbr">CPM</div>
+          <div class="eq-desc">Automated joint mobilization post-surgery</div>
+        </div>
+        <div class="equip-card">
+          <span class="eq-icon">⚡</span>
+          <div class="eq-name">Interferential Therapy</div>
+          <div class="eq-abbr">IFT</div>
+          <div class="eq-desc">Deep tissue pain relief using electrical stimulation</div>
+        </div>
+        <div class="equip-card">
+          <span class="eq-icon">📡</span>
+          <div class="eq-name">Short Wave Diathermy</div>
+          <div class="eq-abbr">SWD</div>
+          <div class="eq-desc">Deep heat therapy for muscles and joints</div>
+        </div>
+        <div class="equip-card">
+          <span class="eq-icon">🔊</span>
+          <div class="eq-name">Ultrasound Therapy</div>
+          <div class="eq-abbr">US</div>
+          <div class="eq-desc">Sound waves for deep healing and inflammation</div>
+        </div>
+        <div class="equip-card">
+          <span class="eq-icon">🌡️</span>
+          <div class="eq-name">Paraffin Wax Bath</div>
+          <div class="eq-abbr">PWB</div>
+          <div class="eq-desc">Soothing heat therapy for joint stiffness</div>
+        </div>
+        <div class="equip-card">
+          <span class="eq-icon">🔋</span>
+          <div class="eq-name">TENS Therapy</div>
+          <div class="eq-abbr">TENS</div>
+          <div class="eq-desc">Non-invasive nerve stimulation for pain control</div>
+        </div>
+        <div class="equip-card">
+          <span class="eq-icon">↕️</span>
+          <div class="eq-name">Traction Unit</div>
+          <div class="eq-abbr">Lumbar & Cervical</div>
+          <div class="eq-desc">Spinal decompression for disc and nerve pain</div>
+        </div>
+        <div class="equip-card">
+          <span class="eq-icon">💡</span>
+          <div class="eq-name">Infra Red Radiation</div>
+          <div class="eq-abbr">IRR</div>
+          <div class="eq-desc">Light therapy for tissue healing and pain relief</div>
+        </div>
+        <div class="equip-card">
+          <span class="eq-icon">🦾</span>
+          <div class="eq-name">Muscle Stimulator</div>
+          <div class="eq-abbr">EMS</div>
+          <div class="eq-desc">Electrical muscle re-education and strengthening</div>
+        </div>
+        <div class="equip-card">
+          <span class="eq-icon">🔄</span>
+          <div class="eq-name">Continuous Passive Motion</div>
+          <div class="eq-abbr">CPM</div>
+          <div class="eq-desc">Automated joint mobilization post-surgery</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ──────── ABOUT ──────── -->
+<section id="about">
+  <div class="max-w">
+    <div class="about-grid">
+      <div class="about-image-area reveal">
+        <div class="about-main-card">
+          <svg class="about-illustration" viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="90" cy="40" r="28" fill="rgba(255,255,255,0.2)"/>
+            <rect x="78" y="70" width="24" height="50" rx="12" fill="rgba(255,255,255,0.15)"/>
+            <rect x="55" y="78" width="20" height="36" rx="10" fill="rgba(255,255,255,0.12)" transform="rotate(-12 65 96)"/>
+            <rect x="103" y="78" width="20" height="36" rx="10" fill="rgba(255,255,255,0.12)" transform="rotate(12 113 96)"/>
+            <rect x="73" y="122" width="14" height="40" rx="7" fill="rgba(255,255,255,0.1)" transform="rotate(-4 80 142)"/>
+            <rect x="91" y="122" width="14" height="40" rx="7" fill="rgba(255,255,255,0.1)" transform="rotate(4 98 142)"/>
+            <path d="M55 95 Q90 75 125 95" stroke="rgba(127,222,214,0.6)" stroke-width="2" fill="none" stroke-dasharray="4 3"/>
+            <circle cx="130" cy="52" r="16" fill="rgba(127,222,214,0.25)" stroke="rgba(127,222,214,0.5)" stroke-width="1.5"/>
+            <text x="122" y="57" font-size="16">❤️</text>
+            <text x="16" y="50" font-size="13" fill="rgba(255,255,255,0.6)" font-family="DM Sans">12+</text>
+            <text x="10" y="65" font-size="10" fill="rgba(255,255,255,0.4)" font-family="DM Sans">Years Care</text>
+          </svg>
+        </div>
+        <div class="about-overlay-card">
+          <div class="aoc-rating">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <div class="aoc-score">4.8</div>
+          <div class="aoc-label">Average Patient Rating</div>
+          <div class="aoc-count">From 31+ verified reviews</div>
+        </div>
+      </div>
+
+      <div class="about-text reveal reveal-delay-2">
+        <span class="section-tag">// Our Story</span>
+        <h2 class="section-title">12 Years of Healing<br>Rajkot, One Patient<br>at a Time</h2>
+        <p style="color: var(--grey); line-height: 1.8; margin-bottom: 1.2rem;">
+          Founded with a clear mission — to put patients first in a world that often puts profit first — Planet Health Care has grown to become one of Rajkot's most trusted physiotherapy clinics. Situated at the heart of Royal Park, Kalavad Road, we have spent over a decade restoring movement, reducing pain, and transforming lives.
+        </p>
+        <p style="color: var(--grey); line-height: 1.8; margin-bottom: 2rem;">
+          Every treatment plan we create is personal. We listen, assess, and design a recovery journey that fits <em>you</em> — not a template. From advanced equipment therapy to hands-on manual techniques, we combine clinical science with genuine human care.
+        </p>
+        <div class="about-values">
+          <div class="av-item">
+            <span class="av-icon">🎯</span>
+            <div class="av-title">Patient-First</div>
+            <div class="av-desc">Every decision puts your recovery and comfort above everything else.</div>
+          </div>
+          <div class="av-item">
+            <span class="av-icon">🔬</span>
+            <div class="av-title">Evidence-Based</div>
+            <div class="av-desc">All treatments are backed by clinical science and modern research.</div>
+          </div>
+          <div class="av-item">
+            <span class="av-icon">🤝</span>
+            <div class="av-title">Transparent</div>
+            <div class="av-desc">Honest guidance, clear pricing, and no hidden surprises.</div>
+          </div>
+          <div class="av-item">
+            <span class="av-icon">🏆</span>
+            <div class="av-title">Experienced</div>
+            <div class="av-desc">Over 12 years treating hundreds of patients across all age groups.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ──────── TESTIMONIALS ──────── -->
+<section id="testimonials">
+  <div class="max-w">
+    <div class="section-header centered reveal">
+      <span class="section-tag">// Patient Reviews</span>
+      <h2 class="section-title" style="color:white;">What Our Patients Say</h2>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testi-card reveal">
+        <div class="testi-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="testi-quote">"I had severe shoulder pain for months and within just a few days of treatment at Planet Health Care, I noticed tremendous improvement. The doctor also guided me on exercises to stay strong long-term."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">R</div>
+          <div>
+            <div class="testi-name">Rahul M.</div>
+            <div class="testi-cond">Shoulder Pain Treatment</div>
+            <div class="testi-source">✓ Verified Patient</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal reveal-delay-1">
+        <div class="testi-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="testi-quote">"Planet Health Care is the most patient-centric clinic I've ever visited in Rajkot. They are transparent, professional, and genuinely care about your recovery — not just your payment."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">P</div>
+          <div>
+            <div class="testi-name">Priya S.</div>
+            <div class="testi-cond">Cervical Spondylosis</div>
+            <div class="testi-source">✓ Verified Patient</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal reveal-delay-2">
+        <div class="testi-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="testi-quote">"After my knee surgery, I thought I'd never play football again. The team here created a custom rehab program and I was back on the field in 10 weeks. Absolutely life-changing."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">A</div>
+          <div>
+            <div class="testi-name">Arjun K.</div>
+            <div class="testi-cond">Post-Surgery Knee Rehab</div>
+            <div class="testi-source">✓ Verified Patient</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal">
+        <div class="testi-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="testi-quote">"My mother had a stroke and was partially paralysed. The neuro physiotherapy here has been nothing short of a miracle. She is now walking with minimal support. Deeply grateful."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">N</div>
+          <div>
+            <div class="testi-name">Nisha D.</div>
+            <div class="testi-cond">Neuro Rehab – Stroke Recovery</div>
+            <div class="testi-source">✓ Verified Patient</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal reveal-delay-1">
+        <div class="testi-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="testi-quote">"I was suffering from severe lower back pain due to a slip disc. After regular IFT and traction sessions, I'm completely pain-free. The home visit service was a lifesaver when I couldn't travel."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">S</div>
+          <div>
+            <div class="testi-name">Suresh V.</div>
+            <div class="testi-cond">Slip Disc (PIVD)</div>
+            <div class="testi-source">✓ Verified Patient</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal reveal-delay-2">
+        <div class="testi-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="testi-quote">"My 4-year-old daughter has cerebral palsy and finding the right physiotherapist was critical. Planet Health Care's pediatric therapy is exceptional — gentle, patient, and highly effective."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">M</div>
+          <div>
+            <div class="testi-name">Meena J.</div>
+            <div class="testi-cond">Pediatric Physiotherapy</div>
+            <div class="testi-source">✓ Verified Patient</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ──────── HOME VISIT ──────── -->
+<div id="home-visit">
+  <div class="hv-inner reveal">
+    <span class="hv-icon">🏠</span>
+    <h2 class="hv-title">Can't Come to Us?<br>We'll Come to You.</h2>
+    <p class="hv-sub">Professional physiotherapy home visits available across Rajkot. Get expert treatment in the comfort of your home — ideal for elderly, post-surgical, or mobility-restricted patients.</p>
+    <a href="https://wa.me/919307188492?text=Hello%2C%20I%20would%20like%20to%20request%20a%20home%20visit%20physiotherapy%20appointment." target="_blank" class="btn-white">
+      <svg style="width:20px;height:20px;flex-shrink:0;" viewBox="0 0 24 24" fill="#1A7F74" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+      Request a Home Visit on WhatsApp
+    </a>
+  </div>
+</div>
+
+<!-- ──────── CONTACT ──────── -->
+<section id="contact">
+  <div class="max-w">
+    <div class="section-header reveal">
+      <span class="section-tag">// Get In Touch</span>
+      <h2 class="section-title">Book Your<br>Appointment Today</h2>
+      <p class="section-sub">Visit us at Royal Park, Kalavad Road or call to speak with our team. Walk-ins welcome during clinic hours.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div class="ci-item">
+          <div class="ci-icon">📍</div>
+          <div>
+            <div class="ci-label">Branch 1 – Main Centre</div>
+            <div class="ci-val">Royal Park Corner, Opp. Parimal School,<br>Near Ravi Tower, Kalavad Road,<br>Rajkot – 360004, Gujarat</div>
+
+            <div class="ci-val"></div>
+          </div>
+        </div>
+        <div class="ci-item">
+          <div class="ci-icon">📍</div>
+          <div>
+            <div class="ci-label">Branch 2 – New Centre</div>
+            <div class="ci-val">Unity Plus Complex, 212, <br>80 Feet Rd, Near Speedwell Heights,<br>Behind Speedwell Party Plot, Mota Mava,<br>Rajkot - 360005, Gujarat</div>
+          </div>
+        </div>
+        <div class="ci-item">
+          <div class="ci-icon">📞</div>
+          <div>
+            <div class="ci-label">Phone / WhatsApp</div>
+            <div class="ci-val"><a href="tel:+919307188492">+91 93071 88492</a></div>
+          </div>
+        </div>
+        <div class="ci-item">
+          <div class="ci-icon">🕐</div>
+          <div>
+            <div class="ci-label">Clinic Hours</div>
+            <div class="timing-grid">
+              <div class="timing-row"><span class="day">Monday</span><span class="time">9 AM – 8 PM</span></div>
+              <div class="timing-row"><span class="day">Tuesday</span><span class="time">9 AM – 8 PM</span></div>
+              <div class="timing-row"><span class="day">Wednesday</span><span class="time">9 AM – 8 PM</span></div>
+              <div class="timing-row"><span class="day">Thursday</span><span class="time">9 AM – 8 PM</span></div>
+              <div class="timing-row"><span class="day">Friday</span><span class="time">9 AM – 8 PM</span></div>
+              <div class="timing-row"><span class="day">Saturday</span><span class="time">9 AM – 8 PM</span></div>
+              <div class="timing-row closed"><span class="day">Sunday</span><span class="time">Closed</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="social-links">
+          <!-- WhatsApp -->
+          <a href="https://wa.me/919307188492" target="_blank" class="soc-link wa" title="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            WhatsApp
+          </a>
+          <!-- Facebook -->
+          <a href="https://www.facebook.com/planethealthcarerajkot" target="_blank" class="soc-link fb" title="Facebook">
+            <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            Facebook
+          </a>
+          <!-- Instagram -->
+          <a href="https://www.instagram.com/planet_health_care" target="_blank" class="soc-link ig" title="Instagram">
+            <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            Instagram
+          </a>
+        </div>
+        <div class="map-boxes">
+          <!-- Branch 1 map link -->
+          <a href="https://maps.google.com/?q=Planet+Health+Care+Royal+Park+Kalavad+Road+Rajkot" target="_blank" class="map-box">
+            <span class="map-pin">📍</span>
+            <div class="map-text">
+              <span class="map-branch">Branch 1 – Main Centre</span>
+              <span class="map-label">Get Directions – Kalavad Road</span>
+              <span class="map-sub">Royal Park Corner, Opp. Parimal School, Near Ravi Tower, Rajkot – 360004</span>
+            </div>
+            <span class="map-arrow">→</span>
+          </a>
+          <!-- Branch 2 map link -->
+          <a href="https://share.google/XiIan4lVOIjGtV3Gf" target="_blank" class="map-box">
+            <span class="map-pin">📍</span>
+            <div class="map-text">
+              <span class="map-branch">Branch 2 – New Centre</span>
+              <span class="map-label">Get Directions – Branch 2</span>
+              <span class="map-sub">Unity Plus Complex, 212, 80 Feet Rd, Near Speedwell Heights, Behind Speedwell Party Plot, Mota Mava, Rajkot - 360005, Gujarat</span>
+            </div>
+            <span class="map-arrow">→</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-form-box reveal reveal-delay-2">
+        <div class="form-title">Book an Appointment</div>
+
+        <!-- ── BRANCH SELECTOR ── -->
+        <div class="branch-selector">
+          <span class="branch-selector-label">Select Your Preferred Location *</span>
+          <div class="branch-cards">
+            <label class="branch-card selected" id="branch-card-1" onclick="selectBranch(1)">
+              <input type="radio" name="branch" value="Branch 1 – Royal Park, Kalavad Road" checked>
+              <div class="branch-card-name">📍 Branch 1 – Kalavad Road</div>
+              <div class="branch-card-addr">Royal Park Corner, Opp. Parimal School, Near Ravi Tower, Kalavad Road, Rajkot – 360004</div>
+              <div class="branch-card-pin">✔ Main Centre</div>
+            </label>
+            <label class="branch-card" id="branch-card-2" onclick="selectBranch(2)">
+              <input type="radio" name="branch" value="Branch 2 – Rajkot (Second Location)">
+              <div class="branch-card-name">📍 Branch 2 – Mota Mava</div>
+              <div class="branch-card-addr">Unity Plus Complex, 212, 80 Feet Rd, Near Speedwell Heights, Behind Speedwell Party Plot, Mota Mava, Rajkot - 360005, Gujarat</div>
+              <div class="branch-card-pin">✔ New Centre</div>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Full Name *</label>
+            <input type="text" placeholder="Your name" id="fname">
+            <span class="field-error" id="err-fname">Please enter your full name.</span>
+          </div>
+          <div class="form-group">
+            <label>Phone Number *</label>
+            <input type="tel" placeholder="+91 XXXXXX XXXX" id="fphone">
+            <span class="field-error" id="err-fphone">Please enter a valid 10-digit phone number.</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Condition / Problem *</label>
+          <select id="fcond">
+            <option value="">Select your condition...</option>
+            <option>Back Pain / Lumbar Pain</option>
+            <option>Neck Pain / Cervical Pain</option>
+            <option>Knee Pain</option>
+            <option>Shoulder Pain / Frozen Shoulder</option>
+            <option>Sciatica / Slip Disc (PIVD)</option>
+            <option>Sports Injury</option>
+            <option>Paralysis / Stroke Rehab</option>
+            <option>Post-Surgery Rehabilitation</option>
+            <option>Pediatric Physiotherapy</option>
+            <option>Pregnancy Exercise Therapy</option>
+            <option>Home Visit Required</option>
+            <option>Other</option>
+          </select>
+          <span class="field-error" id="err-fcond">Please select your condition or problem.</span>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Preferred Date *</label>
+            <input type="date" id="fdate">
+            <span class="field-error" id="err-fdate">Please choose a preferred date.</span>
+          </div>
+          <div class="form-group">
+            <label>Preferred Time</label>
+            <select id="ftime">
+              <option>10:00 AM – 11:00 AM</option>
+              <option>11:00 AM – 12:00 PM</option>
+              <option>12:00 PM – 1:00 PM</option>
+              <option>2:00 PM – 3:00 PM</option>
+              <option>3:00 PM – 4:00 PM</option>
+              <option>4:00 PM – 5:00 PM</option>
+              <option>5:00 PM – 6:00 PM</option>
+              <option>6:00 PM – 7:00 PM</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Additional Notes</label>
+          <textarea placeholder="Describe your condition or any specific requirements..." id="fnotes"></textarea>
+        </div>
+        <button class="btn-submit" onclick="sendWhatsApp()">
+          <svg style="width:20px;height:20px;flex-shrink:0;" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          Confirm Appointment via WhatsApp
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ──────── FOOTER ──────── -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-logo-area">
+      <div class="logo" style="margin-bottom: 1rem;">
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="white"/>
+            <path d="M10 9h4M12 7v4" stroke="#1A7F74" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-name">Planet Health Care</span>
+          <span class="logo-sub">Rajkot · Est. 12+ Years</span>
+        </div>
+      </div>
+      <p class="footer-tagline">Your Recovery. Our Purpose.<br>Advanced physiotherapy care in the heart of Rajkot, trusted by hundreds of patients for over 12 years.</p>
+    </div>
+
+    <div class="footer-col">
+      <div class="footer-col-title">Services</div>
+      <a href="#services">Sports Physiotherapy</a>
+      <a href="#services">Orthopedic Rehab</a>
+      <a href="#services">Neuro Physiotherapy</a>
+      <a href="#services">Pediatric Care</a>
+      <a href="#services">Pregnancy Therapy</a>
+      <a href="#home-visit">Home Visits</a>
+    </div>
+
+    <div class="footer-col">
+      <div class="footer-col-title">Clinic</div>
+      <a href="#about">About Us</a>
+      <a href="#equipment">Our Equipment</a>
+      <a href="#testimonials">Patient Reviews</a>
+      <a href="#conditions">Conditions Treated</a>
+      <a href="#contact">Book Appointment</a>
+    </div>
+
+    <div class="footer-col">
+      <div class="footer-col-title">Our Locations</div>
+      <div class="footer-contact-item">
+        <span class="icon">📍</span>
+        <span class="val"><strong style="color:rgba(255,255,255,0.8);">Branch 1</strong><br>Royal Park Corner, Opp. Parimal School, Near Ravi Tower, Kalavad Road, Rajkot – 360004</span>
+      </div>
+      <div class="footer-contact-item">
+        <span class="icon">📍</span>
+        <span class="val"><strong style="color:rgba(255,255,255,0.8);">Branch 2</strong><br>Unity Plus Complex, 212, 80 Feet Rd, Near Speedwell Heights, Behind Speedwell Party Plot, Mota Mava, Rajkot - 360005, Gujarat</a></span>
+      </div>
+      <div class="footer-contact-item">
+        <span class="icon">📞</span>
+        <span class="val"><a href="tel:+919307188492" style="color: #7FDED6; text-decoration: none;">+91 93071 88492</a></span>
+      </div>
+      <div class="footer-contact-item">
+        <span class="icon">🕐</span>
+        <span class="val">Mon–Sat: 9 AM – 8 PM<br>Sunday: Closed</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2025 Planet Health Care, Rajkot. All rights reserved.</div>
+    <div class="footer-copy">Royal Park Corner, Kalavad Road, Rajkot – 360004 · Branch 2: Rajkot · +91 93071 88492</div>
+  </div>
+</footer>
+
+<!-- ──────── FLOATING BUTTONS ──────── -->
+<!-- <a href="tel:+919307188492" class="float-call" title="Call Now">📞</a> -->
+<a href="https://wa.me/919307188492?text=Hello%2C%20I%20would%20like%20to%20book%20an%20appointment%20at%20Planet%20Health%20Care." class="float-whatsapp" target="_blank" title="WhatsApp"><svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg" style="width:28px;height:28px;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a>
+
+<!-- ──────── SCRIPTS ──────── -->
+<script>
+  // Header scroll
+  const header = document.getElementById('main-header');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 40);
+  });
+
+  // Mobile menu
+  function toggleMenu() {
+    const menu = document.getElementById('mobileMenu');
+    menu.classList.toggle('open');
+  }
+
+  // Reveal on scroll
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.12 });
+  reveals.forEach(el => observer.observe(el));
+
+  // Counter animation
+  function animateCounter(el, target, suffix) {
+    let start = 0;
+    const duration = 1800;
+    const startTime = performance.now();
+    const decimals = target === 48; // 4.8 star
+    const actualTarget = decimals ? 4.8 : target;
+    const step = (now) => {
+      const elapsed = now - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const current = eased * actualTarget;
+      el.textContent = decimals ? current.toFixed(1) : Math.floor(current) + (target === 1000 ? '+' : target === 12 ? '+' : target === 25 ? '+' : '');
+      if (progress < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  }
+
+  const statNums = document.querySelectorAll('.stat-num');
+  const statTargets = [12, 48, 1000, 25];
+  const statObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const idx = [...statNums].indexOf(e.target);
+        animateCounter(e.target, statTargets[idx]);
+        statObserver.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.5 });
+  statNums.forEach(el => statObserver.observe(el));
+
+  // ── Branch selector ──
+  function selectBranch(num) {
+    document.getElementById('branch-card-1').classList.toggle('selected', num === 1);
+    document.getElementById('branch-card-2').classList.toggle('selected', num === 2);
+    document.querySelectorAll('input[name="branch"]')[num - 1].checked = true;
+  }
+
+  // ── Helpers: mark a field invalid or clear it ──
+  function setInvalid(fieldId, errorId) {
+    const field = document.getElementById(fieldId);
+    const err   = document.getElementById(errorId);
+    field.classList.add('invalid');
+    if (err) err.classList.add('show');
+    // Auto-clear the red state as soon as the user starts correcting
+    field.addEventListener('input', function clearOnFix() {
+      field.classList.remove('invalid');
+      if (err) err.classList.remove('show');
+      field.removeEventListener('input', clearOnFix);
+      field.removeEventListener('change', clearOnFix);
+    });
+    field.addEventListener('change', function clearOnFix() {
+      field.classList.remove('invalid');
+      if (err) err.classList.remove('show');
+      field.removeEventListener('input', clearOnFix);
+      field.removeEventListener('change', clearOnFix);
+    });
+  }
+
+  function clearInvalid(fieldId, errorId) {
+    const field = document.getElementById(fieldId);
+    const err   = document.getElementById(errorId);
+    field.classList.remove('invalid');
+    if (err) err.classList.remove('show');
+  }
+
+  // ── Main WhatsApp submit with full validation ──
+  function sendWhatsApp() {
+    const name  = document.getElementById('fname').value.trim();
+    const phone = document.getElementById('fphone').value.trim();
+    const cond  = document.getElementById('fcond').value;
+    const date  = document.getElementById('fdate').value;
+    const time  = document.getElementById('ftime').value;
+    const notes = document.getElementById('fnotes').value.trim();
+    const branchRadio = document.querySelector('input[name="branch"]:checked');
+    const branch = branchRadio ? branchRadio.value : 'Branch 1 – Royal Park, Kalavad Road';
+
+    // ── Validate each required field; track whether all passed ──
+    let valid = true;
+
+    // Name: must not be empty and at least 2 characters
+    if (name.length < 2) {
+      setInvalid('fname', 'err-fname');
+      valid = false;
+    } else {
+      clearInvalid('fname', 'err-fname');
+    }
+
+    // Phone: must be digits only, 10 digits (Indian mobile)
+    const phoneDigits = phone.replace(/[\s\-\+]/g, '');
+    if (!/^\d{10}$/.test(phoneDigits)) {
+      setInvalid('fphone', 'err-fphone');
+      valid = false;
+    } else {
+      clearInvalid('fphone', 'err-fphone');
+    }
+
+    // Condition: must have a selection (not the placeholder empty value)
+    if (!cond) {
+      setInvalid('fcond', 'err-fcond');
+      valid = false;
+    } else {
+      clearInvalid('fcond', 'err-fcond');
+    }
+
+    // Date: must not be empty
+    if (!date) {
+      setInvalid('fdate', 'err-fdate');
+      valid = false;
+    } else {
+      clearInvalid('fdate', 'err-fdate');
+    }
+
+    // If anything failed, scroll the form into view and stop here
+    if (!valid) {
+      // Find the first invalid field and scroll to it so the user sees it
+      const firstInvalid = document.querySelector('.form-group input.invalid, .form-group select.invalid');
+      if (firstInvalid) {
+        firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        firstInvalid.focus();
+      }
+      return; // Do NOT open WhatsApp
+    }
+
+    // All fields valid — build the message and open WhatsApp
+    const msg = `Hello Planet Health Care! I'd like to book an appointment.\n\n📍 Location: ${branch}\n👤 Name: ${name}\n📞 Phone: ${phone}\n🩺 Condition: ${cond}\n📅 Date: ${date}\n🕐 Time: ${time}\n📝 Notes: ${notes || 'None'}`;
+    window.open('https://wa.me/919307188492?text=' + encodeURIComponent(msg), '_blank');
+  }
+
+  // Active nav on scroll
+  const sections = document.querySelectorAll('section[id], div[id="stats"], div[id="home-visit"]');
+  const navLinks = document.querySelectorAll('nav a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => {
+      if (window.scrollY >= s.offsetTop - 100) current = s.id;
+    });
+    navLinks.forEach(a => {
+      a.style.color = a.getAttribute('href') === '#' + current ? 'var(--teal)' : '';
+    });
+  });
+</script>
+</body>
+</html>
